@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+        <TextView
+            android:id="@+id/text_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/text_label_temp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:drawable/picture_frame"
+            android:text="溫度"
+            android:textSize="24sp"
+            android:gravity="center"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/text_label_humi"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/text_label_mois_setting" />
+
+        <TextView
+            android:id="@+id/text_label_humi"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:drawable/picture_frame"
+            android:text="濕度"
+            android:textSize="24sp"
+            android:gravity="center"
+            app:layout_constraintLeft_toRightOf="@id/text_label_temp"
+            app:layout_constraintRight_toLeftOf="@id/text_label_mois"
+            app:layout_constraintTop_toTopOf="@id/text_label_temp"
+            app:layout_constraintBottom_toBottomOf="@id/text_label_mois_setting" />
+
+        <TextView
+            android:id="@+id/text_label_mois"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:drawable/picture_frame"
+            android:text="水份"
+            android:textSize="24sp"
+            android:gravity="center"
+            app:layout_constraintLeft_toRightOf="@id/text_label_humi"
+            app:layout_constraintRight_toRightOf="@id/text_label_mois_setting"
+            app:layout_constraintTop_toTopOf="@id/text_label_temp"
+            app:layout_constraintBottom_toBottomOf="@id/text_label_mois_setting" />
+
+        <TextView
+            android:id="@+id/text_label_mois_setting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/picture_frame"
+            android:text="水份\n設定"
+            android:textSize="24sp"
+            android:gravity="center"
+            app:layout_constraintLeft_toRightOf="@id/text_label_mois"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_label_temp" />
+
+        <TextView
+            android:id="@+id/text_cur_temp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/picture_frame"
+            android:text="---"
+            android:textSize="48sp"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="@id/text_label_temp"
+            app:layout_constraintRight_toRightOf="@id/text_label_temp"
+            app:layout_constraintTop_toBottomOf="@id/text_label_temp" />
+
+        <TextView
+            android:id="@+id/text_cur_humi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/picture_frame"
+            android:text="---"
+            android:textSize="48sp"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="@id/text_label_humi"
+            app:layout_constraintRight_toRightOf="@id/text_label_humi"
+            app:layout_constraintTop_toBottomOf="@id/text_label_humi" />
+
+        <TextView
+            android:id="@+id/text_cur_mois"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/picture_frame"
+            android:text="---"
+            android:textSize="48sp"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="@id/text_label_mois"
+            app:layout_constraintRight_toRightOf="@id/text_label_mois"
+            app:layout_constraintTop_toBottomOf="@id/text_label_mois" />
+
+        <TextView
+            android:id="@+id/text_cur_mois_setting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/picture_frame"
+            android:text="---"
+            android:textSize="48sp"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="@id/text_label_mois_setting"
+            app:layout_constraintRight_toRightOf="@id/text_label_mois_setting"
+            app:layout_constraintTop_toBottomOf="@id/text_label_mois_setting" />
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_cur_temp" />
+
+        <TextView
+            android:id="@+id/text_label_clock"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/picture_frame"
+            android:text="澆水\n時鐘"
+            android:textSize="24sp"
+            android:gravity="center"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintLeft_toLeftOf="@id/text_cur_temp"
+            app:layout_constraintRight_toRightOf="@id/text_cur_temp"
+            app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+        <TextView
+            android:id="@+id/text_timer0_val"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:drawable/picture_frame"
+            android:text="--:--"
+            android:textSize="32sp"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="@id/text_cur_humi"
+            app:layout_constraintRight_toRightOf="@id/text_cur_humi"
+            app:layout_constraintTop_toTopOf="@id/text_label_clock"
+            app:layout_constraintBottom_toBottomOf="@id/text_label_clock" />
+
+        <TextView
+            android:id="@+id/text_timer1_val"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:drawable/picture_frame"
+            android:text="--:--"
+            android:textSize="32sp"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="@id/text_cur_mois"
+            app:layout_constraintRight_toRightOf="@id/text_cur_mois"
+            app:layout_constraintTop_toTopOf="@id/text_label_clock"
+            app:layout_constraintBottom_toBottomOf="@id/text_label_clock" />
+
+        <TextView
+            android:id="@+id/text_timer2_val"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:drawable/picture_frame"
+            android:text="--:--"
+            android:textSize="32sp"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="@id/text_cur_mois_setting"
+            app:layout_constraintRight_toRightOf="@id/text_cur_mois_setting"
+            app:layout_constraintTop_toTopOf="@id/text_label_clock"
+            app:layout_constraintBottom_toBottomOf="@id/text_label_clock" />
+
+        <TextView
+            android:id="@+id/text_label_duration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/picture_frame"
+            android:text="澆水持\n續時間"
+            android:textSize="24sp"
+            android:gravity="center"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintLeft_toLeftOf="@id/text_label_clock"
+            app:layout_constraintRight_toRightOf="@id/text_label_clock"
+            app:layout_constraintTop_toBottomOf="@id/text_label_clock" />
+
+        <TextView
+            android:id="@+id/text_duration_val"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:drawable/picture_frame"
+            android:text="---"
+            android:textSize="24sp"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="@id/text_timer0_val"
+            app:layout_constraintRight_toRightOf="@id/text_timer0_val"
+            app:layout_constraintTop_toTopOf="@id/text_label_duration"
+            app:layout_constraintBottom_toBottomOf="@id/text_label_duration"/>
+
+        <TextView
+            android:id="@+id/text_label_water_status"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:drawable/picture_frame"
+            android:text="澆水\n狀態"
+            android:textSize="24sp"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="@id/text_timer1_val"
+            app:layout_constraintRight_toRightOf="@id/text_timer1_val"
+            app:layout_constraintTop_toTopOf="@id/text_label_duration"
+            app:layout_constraintBottom_toBottomOf="@id/text_label_duration"/>
+
+        <TextView
+            android:id="@+id/text_val_water_status"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:drawable/picture_frame"
+            android:text="---"
+            android:textSize="24sp"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="@id/text_timer2_val"
+            app:layout_constraintRight_toRightOf="@id/text_timer2_val"
+            app:layout_constraintTop_toTopOf="@id/text_label_duration"
+            app:layout_constraintBottom_toBottomOf="@id/text_label_duration"/>
+
+        <TextView
+            android:id="@+id/text_label_water_mode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/picture_frame"
+            android:text="澆水\n模式"
+            android:textSize="24sp"
+            android:gravity="center"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintLeft_toLeftOf="@id/text_label_duration"
+            app:layout_constraintRight_toRightOf="@id/text_label_duration"
+            app:layout_constraintTop_toBottomOf="@id/text_label_duration" />
+
+        <TextView
+            android:id="@+id/text_val_water_mode"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:drawable/picture_frame"
+            android:text="---"
+            android:textSize="24sp"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="@id/text_duration_val"
+            app:layout_constraintRight_toRightOf="@id/text_duration_val"
+            app:layout_constraintTop_toTopOf="@id/text_label_water_mode"
+            app:layout_constraintBottom_toBottomOf="@id/text_label_water_mode" />
+
+        <Switch
+            android:id="@+id/switch_water"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:drawable/picture_frame"
+            android:text="澆水"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:checked="false"
+            app:layout_constraintBottom_toBottomOf="@id/text_label_water_mode"
+            app:layout_constraintLeft_toLeftOf="@id/text_label_water_status"
+            app:layout_constraintRight_toRightOf="@id/text_val_water_status"
+            app:layout_constraintTop_toTopOf="@id/text_label_water_mode" />
+
+        <Button
+            android:id="@+id/btn_connect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="開始\n連線"
+            android:textSize="48sp"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="@id/text_val_water_mode"
+            app:layout_constraintRight_toRightOf="@id/text_label_water_status"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

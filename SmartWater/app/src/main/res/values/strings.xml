@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SmartWater</string>
+    <string name="btn_water_stop">停止澆水</string>
+    <string name="btn_water_continue">連續澆水</string>
+    <string name="btn_water_smart">智能澆水</string>
+    <string name="img_water_light">water light</string>
+    <string name="btn_water_area_1">一區啟動</string>
+    <string name="tv_time_format">00:00</string>
+</resources>
